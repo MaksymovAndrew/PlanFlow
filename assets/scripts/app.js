@@ -108,7 +108,7 @@ class ProjectItem {
     this.hasActiveTooltip = true;
   }
 
-  // starting dragging
+  // starting dragging items
   connectDrag() {
     document.getElementById(this.id).addEventListener("dragstart", (event) => {
       event.dataTransfer.setData("text/plain", this.id);
