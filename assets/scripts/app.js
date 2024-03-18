@@ -88,6 +88,7 @@ class ProjectItem {
     this.updateProjectListsHandler = updateProjectListsFunction;
     this.connectMoreInfoButton();
     this.connectSwitchButton(type);
+    this.connectDrag();
   }
 
   showMoreInfoHandler() {
@@ -105,6 +106,14 @@ class ProjectItem {
     );
     tooltip.attach();
     this.hasActiveTooltip = true;
+  }
+
+  // starting dragging
+  connectDrag() {
+    document.getElementById(this.id).addEventListener("dragstart", (event) => {
+      event.dataTransfer.setData("text/plain", this.id);
+      event.dataTransfer.effectAllowed = "move";
+    });
   }
 
   connectMoreInfoButton() {
@@ -145,6 +154,42 @@ class ProjectList {
       );
     }
     // console.log(this.projects);
+    this.connetDropable();
+  }
+  //simply code for adding new projects via dragging the project to finished/active projects
+  connetDropable() {
+    const list = document.querySelector(`#${this.type}-projects ul`);
+
+    list.addEventListener("dragenter", (event) => {
+      if (event.dataTransfer.types[0] === "text/plain") {
+        //optional(just for cases where u have more operations in the app)
+        list.parentElement.classList.add("droppable");
+        event.preventDefault();
+      }
+    });
+
+    list.addEventListener("dragover", (event) => {
+      if (event.dataTransfer.types[0] === "text/plain") {
+        event.preventDefault();
+      }
+    });
+    list.addEventListener("dragleave", (event) => {
+      if (event.relatedTarget.closest(`#${this.type}-projects ul`) !== list) {
+        list.parentElement.classList.remove("droppable");
+      }
+    });
+    list.addEventListener("drop", (event) => {
+      const projId = event.dataTransfer.getData("text/plain");
+      if (this.projects.find((p) => p.id === projId)) {
+        return;
+      }
+      document
+        .getElementById(projId)
+        .querySelector("button:last-of-type")
+        .click(); //GENIOUS!!!
+      list.parentElement.classList.remove("droppable");
+      event.preventDefault(); // optional
+    });
   }
 
   setSwitchHandlerFunction(switchHandlerFunction) {
@@ -176,7 +221,7 @@ class App {
     finishedProjectsList.setSwitchHandlerFunction(
       activeProjectsList.addProject.bind(activeProjectsList)
     );
-    
+
     //we dont need this in app, just an example of intervals/timers
     const timerId = setTimeout(this.startAnalytics, 3000);
 
