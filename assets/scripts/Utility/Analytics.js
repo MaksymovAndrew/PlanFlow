@@ -4,5 +4,6 @@ const intervalId = setInterval(() => {
 }, 2000);
 
 document.getElementById("stop-analytics-btn").addEventListener("click", () => {
+  document.getElementById("stop-analytics-btn").style.display = "none";
   clearTimeout(intervalId);
 });

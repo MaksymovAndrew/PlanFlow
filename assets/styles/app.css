@@ -66,6 +66,8 @@ button {
   border: 1px solid #ff0062;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 button.alt {
@@ -82,6 +84,7 @@ button:active {
   background: #ff2579;
   border-color: #ff2579;
   color: white;
+  
 }
 
 .card {
