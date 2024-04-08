@@ -1,5 +1,6 @@
 //class for one item
-export default class  { //Component (no difference, just trying default import/export method)
+export default class {
+  //Component (no difference, just trying default import/export method)
   constructor(hostElementId, insertBefore = false) {
     if (hostElementId) {
       this.hostElement = document.getElementById(hostElementId);

@@ -1,0 +1,33 @@
+{
+  "name": "planflow",
+  "version": "1.0.0",
+  "description": "PlanFlow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaksymovAndrew/PlanFlow.git"
+  },
+  "author": "Andrew Maksymov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaksymovAndrew/PlanFlow/issues"
+  },
+  "homepage": "https://github.com/MaksymovAndrew/PlanFlow#readme",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "globals": "^15.0.0",
+    "webpack": "4.47.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

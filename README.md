@@ -48,6 +48,14 @@
 
 # **NEWS**
 
+> ## Minor update 0.1.10 is here
+>
+> ### **What's New?**
+>
+> - Added some new packages for work(still in progress)
+>
+> ---
+>
 > ## **UPDATE 0.1 IS HERE**
 >
 > ### **What's New?**
@@ -60,3 +68,5 @@
 > - Now you need a server (could be local)
 > - You can now stop analytics right after loading in app(there is actually no analytics, just an example of timers, so don't worry)
 > - Added new icon of the app
+>
+> ---
