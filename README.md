@@ -6,7 +6,20 @@
 
 ---
 
-## **How to run code?**
+# **How to run code?**
+
+> ## **FIRST STEP**
+>
+> ### **Open your Visual Studio Code or default console (easier to use VSCode).**
+>
+> - **IF you use VSCode**, just type in your terminal (to find it => _Ctrl + '_ ) and type there `npm i` or `npm install`
+>
+> - **IF you use cmd etc.**, you need to navigate your console to the project:
+>   1. For that use command `dir` to look through which directories you have available
+>   2. Next you need to choose your directory `cd` and place where your project is located (e.g. `cd desktop`). If it is located deeper than just on _desktop_, use `cd` multiple times and that's it
+>   3. Type in your console (that's navigated to your project) `npm i` or `npm install`
+
+---
 
 > ## Via node.js
 >
@@ -48,6 +61,14 @@
 
 # **NEWS**
 
+> ## Hotfix 0.1.11
+>
+> ### **What's New?**
+>
+> - made some changes in order to curtail project size (simply easier to download)
+>
+> ---
+>
 > ## Minor update 0.1.10 is here
 >
 > ### **What's New?**
