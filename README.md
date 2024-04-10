@@ -61,15 +61,27 @@
 
 # **NEWS**
 
+> ## Update 0.1.20
+>
+> ### **What's New?**
+>
+> - Added Eslint, to add some rules for codding
+>
+> - Added Webpack, in order to make scripts _load_ faster
+> - Created production and development aproaches to build
+> - Restructured code a lot
+>
+> ---
+>
 > ## Hotfix 0.1.11
 >
 > ### **What's New?**
 >
-> - made some changes in order to curtail project size (simply easier to download)
+> - Made some changes in order to curtail project size (simply easier to download)
 >
 > ---
 >
-> ## Minor update 0.1.10 is here
+> ## Update 0.1.10 is here
 >
 > ### **What's New?**
 >
@@ -77,11 +89,12 @@
 >
 > ---
 >
-> ## **UPDATE 0.1 IS HERE**
+> ## **MAJOR UPDATE 0.1 IS HERE**
 >
 > ### **What's New?**
 >
 > - App is still in _Beta_
+>
 > - You can activate/finish your plans
 > - You can drag and drop your plans
 > - Also you have more info button available
